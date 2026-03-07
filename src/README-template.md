@@ -108,6 +108,9 @@ Describe how you used AI tools (if any) during this project. This helps demonstr
 - What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
 - How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
 - What worked well? What didn't?
+- How to configure Tailwind v4 in a Vite project using JavaScript and TypeScript
+- Correct way to use a gradient in Tailwind v4
+- UI pattern Content Switcher
 
 **Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
 
