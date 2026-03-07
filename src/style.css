@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@utility bg-gradient-light {
+  background: var(--gradient-light);
+}
+
+@utility bg-gradient-dark {
+  background: var(--gradient-dark);
+}
 
 @theme {
     /* Neutral */
