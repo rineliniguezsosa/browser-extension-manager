@@ -14,7 +14,7 @@
         .attribution a { color: hsl(228, 45%, 44%); }
      </style>
   </head>
-  <body class="px-3 py-6 bg-gradient-light">
+  <body class="px-3 py-6 bg-gradient-light h-screen">
     <main>
   
       <div class="rounded-lg p-3 bg-Neutral-0  flex justify-between items-stretch">
@@ -56,18 +56,36 @@
       </div>
   
     <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
-     <div class="w-full mt-10 border-2 border-red-500" id="extension-list">
-       <article class="flex flex-col rounded-lg bg-Neutral-0">
+     <div class="w-full mt-10" id="extension-list">
+       <article class="min-h-50 max-w-100 w-full flex flex-col items-stretch rounded-2xl p-5 bg-Neutral-0">
          <div class="flex flex-row">
-           <div><img src="./src/assets/images/logo-viewport-buddy.svg" alt="ViewportBuddy Icon"></div>
-           <div>
-             <h2>DevLens</h2>
-             <p>Quickly inspect page layouts and visualize element boundaries.</p>
+           <div class="w-1/4">
+            <img src="./src/assets/images/logo-viewport-buddy.svg" alt="ViewportBuddy Icon">
+           </div>
+           <div class="w-3/4 px-1 pb-5">
+             <h2 class="text-base font-bold font-notosans">DevLens</h2>
+             <p class="text-base font-normal font-notosans text-neutral-600">Quickly inspect page layouts and visualize element boundaries.</p>
            </div>
          </div>
-         <div>
-           <button>Remove</button>
-         </div>
+         <div class="flex items-center justify-between">
+          <button class="rounded-full border-2 border-Neutral-300 px-4 py-1 font-notosans font-medium
+          bg-Neutral-0"
+          >
+            Remove
+          </button>
+
+         <label class="relative inline-block w-9.5 h-5 cursor-pointer">
+
+          <input type="checkbox" class="peer sr-only" checked>
+          <div class="absolute inset-0 bg-Red-400 rounded-[34px] transition duration-400
+                      peer-checked:peer-focus:shadow-[0_0_1px_#2196F3]">
+          </div>
+          <div class="absolute left-1 bottom-1 w-3.5 h-3.5 bg-white rounded-full
+                      transition duration-400
+                      peer-checked:translate-x-4.5">
+          </div>
+        </label>
+        </div>
        </article>
      </div>
   
@@ -118,7 +136,7 @@
   
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="#">Rinel iñiguez sosa</a>.
       </div>
     </main>
     <script type="module" src="/src/main.ts"></script>
