@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <label class="relative inline-block w-9.5 h-5 cursor-pointer">
 
-              <input type="checkbox" class="peer sr-only" ${extension.isActive ? 'checked' : '' } />
+              <input type="checkbox" class="peer sr-only" ${extension.isActive ? 'checked' : ''} />
               <div class="absolute inset-0 ${extension.isActive ? 'bg-Red-400' : 'bg-gray-300'} rounded-[34px] transition duration-400
                   peer-checked:peer-focus:shadow-[0_0_1px_#2196F3]">
               </div>
