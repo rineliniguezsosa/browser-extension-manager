@@ -7,26 +7,26 @@ const iconTheme = document.getElementById('iconTheme') as HTMLImageElement;
 
 toggleThemeButton.addEventListener('click', () => {
   document.documentElement.classList.toggle('dark');
-  iconTheme.src = document.documentElement.classList.contains('dark') ? './src/assets/images/icon-moon.svg' : './src/assets/images/icon-sun.svg';
+  iconTheme.src = document.documentElement.classList.contains('dark') ? './src/assets/images/icon-sun.svg':'./src/assets/images/icon-moon.svg';
 });
 
 document.addEventListener('DOMContentLoaded', () => {
   const extensionList = document.getElementById('extension-list') as HTMLDivElement;
   const extensionsAll = data.map((extension) => {
     return `
-        <article class="min-h-50 max-w-100 w-full flex flex-col items-stretch rounded-2xl p-5 bg-Neutral-0 bg-gray">
+        <article class="min-h-50 max-w-100 w-full flex flex-col items-stretch rounded-2xl p-5 bg-card">
           <div class="flex flex-row">
             <div class="w-1/4">
               <img src="${extension.logo}" alt="${extension.name} Icon" />
             </div>
             <div class="w-3/4 px-1 pb-5">
-              <h2 class="text-base font-bold font-notosans">${extension.name}</h2>
+              <h2 class="text-base font-bold font-notosans text-text">${extension.name}</h2>
               <p class="text-base font-normal font-notosans text-text">${extension.description}</p>
             </div>
           </div>
           <div class="flex items-center justify-between">
             <button class="rounded-full border-2 border-Neutral-300 px-4 py-1 font-notosans font-medium
-                  bg-Neutral-0">
+                  bg-buttonRemove text-text">
               Remove
             </button>
 
