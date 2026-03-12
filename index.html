@@ -14,22 +14,22 @@
         .attribution a { color: hsl(228, 45%, 44%); }
      </style>
   </head>
-  <body class="px-3 py-6 bg-gradient-light h-screen">
-    <main>
+  <body class="px-3 py-6 bg-app-gradient min-h-screen">
+    <main class="">
   
       <div class="rounded-lg p-3 bg-Neutral-0  flex justify-between items-stretch">
         <div class="max-w-full">
           <img class="max-w-full h-auto text-Neutral-0" src="./src/assets/images/logo.svg" alt="Logo">
         </div>
   
-        <div class="w-1/6 rounded-lg bg-Neutral-100 flex justify-center items-center">
-          <img class="w-5 h-5" src="./src/assets/images/icon-moon.svg" alt="Moon Icon">
-        </div>
+        <button id="toggleThemeButton" class="w-1/6 rounded-lg bg-Neutral-100 flex justify-center items-center">
+          <img id="iconTheme" class="w-5 h-5" src="./src/assets/images/icon-moon.svg" alt="Moon Icon">
+        </button>
       </div>
 
       <div class="w-full flex-col mt-4" id="extension-list-content">
         <div class="w-full p-5">
-          <h1 class="text-center font-notosans font-bold text-4xl">Extensions List</h1>
+          <h1 class="text-center font-notosans font-bold text-4xl text-text">Extensions List</h1>
         </div>
           
         <div class="flex gap-2 w-full p-1 items-center justify-center" id="extension-list-buttons">
@@ -56,7 +56,7 @@
       </div>
   
     <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
-     <div class="w-full mt-10" id="extension-list">
+     <div class="w-full mt-10 flex flex-col gap-4" id="extension-list">
        <!-- <article class="min-h-50 max-w-100 w-full flex flex-col items-stretch rounded-2xl p-5 bg-Neutral-0">
          <div class="flex flex-row">
            <div class="w-1/4">
