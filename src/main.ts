@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="w-3/4 px-1 pb-5">
               <h2 class="text-base font-bold font-notosans">${extension.name}</h2>
-              <p class="text-base font-normal font-notosans text-neutral-600 bg-gray">${extension.description}</p>
+              <p class="text-base font-normal font-notosans text-text">${extension.description}</p>
             </div>
           </div>
           <div class="flex items-center justify-between">
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <label class="relative inline-block w-9.5 h-5 cursor-pointer">
 
-              <input type="checkbox" class="peer sr-only" ${extension.isActive ? 'checked' : ''} />
+              <input type="checkbox" class="peer sr-only" ${extension.isActive ? 'checked' : '' } />
               <div class="absolute inset-0 ${extension.isActive ? 'bg-Red-400' : 'bg-gray-300'} rounded-[34px] transition duration-400
                   peer-checked:peer-focus:shadow-[0_0_1px_#2196F3]">
               </div>
