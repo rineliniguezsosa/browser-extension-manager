@@ -28,6 +28,7 @@
   --gradient-bg: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
   --color-banner:hsl(200, 60%, 99%);
   --color-text:hsl(226, 11%, 37%);
+  --color-title:hsl(225, 23%, 24%);
   --color-card:hsl(200, 60%, 99%);
   --color-buttonicon:hsl(0, 0%, 93%);
   --color-buttonRemove:hsl(200, 60%, 99%);
@@ -38,6 +39,7 @@
 .dark {
   --gradient-bg: linear-gradient(180deg, #040918 0%, #091540 100%);
   --color-banner:hsl(226, 25%, 17%);
+  --color-title:hsl(200, 60%, 99%);
   --color-text:hsl(200, 60%, 99%);
   --color-card: hsl(225, 23%, 24%);
   --color-buttonicon: hsl(225, 23%, 24%);
