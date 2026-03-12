@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <img src="${extension.logo}" alt="${extension.name} Icon" />
             </div>
             <div class="w-3/4 px-1 pb-5">
-              <h2 class="text-base font-bold font-notosans text-text">${extension.name}</h2>
+              <h2 class="text-xl font-bold font-notosans text-title">${extension.name}</h2>
               <p class="text-base font-normal font-notosans text-text">${extension.description}</p>
             </div>
           </div>
