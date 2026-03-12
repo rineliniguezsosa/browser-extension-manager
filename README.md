@@ -115,6 +115,7 @@ Describe how you used AI tools (if any) during this project. This helps demonstr
 - UI pattern Content Switcher
 - Adapt the code of the switch element to tailwindcss
 - How to use darkmode in Tailwind CSS v4
+- How to configure breakpoints in Tailwind CSS v4
 
 **Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
 
