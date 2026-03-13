@@ -3,18 +3,16 @@ import data from './data.json'
 
 const toggleThemeButton = document.getElementById('toggleThemeButton') as HTMLButtonElement;
 const iconTheme = document.getElementById('iconTheme') as HTMLImageElement;
-
+const extensionList = document.getElementById('extension-list') as HTMLDivElement;
 
 toggleThemeButton.addEventListener('click', () => {
   document.documentElement.classList.toggle('dark');
   iconTheme.src = document.documentElement.classList.contains('dark') ? './src/assets/images/icon-sun.svg':'./src/assets/images/icon-moon.svg';
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const extensionList = document.getElementById('extension-list') as HTMLDivElement;
-  const extensionsAll = data.map((extension) => {
+const extensionsAll = data.map((extension) => {
     return `
-        <article class="min-h-50 max-w-100 w-full flex flex-col items-stretch rounded-2xl p-5 bg-card">
+        <article id="extension-${extension.id}" class="min-h-50 max-w-100 w-full flex flex-col items-stretch rounded-2xl p-5 bg-card desktop:max-w-110">
           <div class="flex flex-row">
             <div class="w-1/4">
               <img src="${extension.logo}" alt="${extension.name} Icon" />
@@ -26,13 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="flex items-center justify-between">
             <button class="rounded-full border-2 border-Neutral-300 px-4 py-1 font-notosans font-medium
-                  bg-buttonRemove text-text">
+                  bg-buttonRemove text-text removeExtensionButton">
               Remove
             </button>
 
             <label class="relative inline-block w-9.5 h-5 cursor-pointer">
 
-              <input type="checkbox" class="peer sr-only" ${extension.isActive ? 'checked' : '' } />
+              <input type="checkbox" class="peer sr-only" ${extension.isActive ? 'checked' : ''} />
               <div class="absolute inset-0 ${extension.isActive ? 'bg-Red-400' : 'bg-gray-300'} rounded-[34px] transition duration-400
                   peer-checked:peer-focus:shadow-[0_0_1px_#2196F3]">
               </div>
@@ -45,5 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
         </article>`;
   }).join('');
 
-  extensionList.innerHTML = extensionsAll;
-});
+extensionList.innerHTML = extensionsAll;
+
+const removeExtensionButton = document.querySelectorAll('.removeExtensionButton') as NodeListOf<HTMLButtonElement>;
+
+removeExtensionButton.forEach((button) => {
+  button.addEventListener('click', () => {
+    console.log('click me');
+
+  })
+})
