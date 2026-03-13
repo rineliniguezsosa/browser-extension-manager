@@ -30,6 +30,9 @@
   --color-buttonicon: hsl(0, 0%, 93%);
   --color-buttonRemove: hsl(200, 60%, 99%);
   --color-button-state: hsl(200, 60%, 99%);
+
+  --breakpoint-desktop: 1440px;
+  
   --font-notosans: "Noto Sans", sans-serif;
 }
 
