@@ -31,17 +31,17 @@
         <img class="max-w-full h-auto" src="./src/assets/images/logo.svg" alt="Logo">
       </div>
 
-      <button id="toggleThemeButton" class="w-1/6 rounded-lg bg-buttonicon flex justify-center items-center">
+      <button id="toggleThemeButton" class="w-1/6 max-w-15 rounded-lg bg-buttonicon flex justify-center items-center">
         <img id="iconTheme" class="w-5 h-5" src="./src/assets/images/icon-moon.svg" alt="Moon Icon">
       </button>
     </div>
 
-    <div class="w-full flex-col mt-4" id="extension-list-content">
-      <div class="w-full p-5">
+    <div class="w-full flex flex-col mt-4 desktop:flex-row" id="extension-list-content">
+      <div class="w-full p-5 border-2 border-red-500">
         <h1 class="text-center font-notosans font-bold text-4xl text-title">Extensions List</h1>
       </div>
 
-      <div class="flex gap-2 w-full p-1 items-center justify-center" id="extension-list-buttons">
+      <div class="flex gap-2 w-full p-1 items-center justify-center border-2 border-red-500" id="extension-list-buttons">
         <button class="rounded-full px-5 py-2 font-notosans font-medium active bg-button-state text-text  hover:text-Neutral-0 
               hover:bg-Red-400">
           All
