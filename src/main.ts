@@ -7,12 +7,15 @@ const extensionList = document.getElementById('extension-list') as HTMLDivElemen
 
 toggleThemeButton.addEventListener('click', () => {
   document.documentElement.classList.toggle('dark');
-  iconTheme.src = document.documentElement.classList.contains('dark') ? './src/assets/images/icon-sun.svg':'./src/assets/images/icon-moon.svg';
+  iconTheme.src = document.documentElement.classList.contains('dark') ?
+    './src/assets/images/icon-sun.svg'
+    : './src/assets/images/icon-moon.svg';
 });
 
 const extensionsAll = data.map((extension) => {
-    return `
-        <article id="extension-${extension.id}" class="min-h-50 max-w-100 w-full flex flex-col items-stretch rounded-2xl p-5 bg-card desktop:max-w-110">
+  return `
+        <article id="extension-${extension.id}" class="min-h-50 max-w-100 w-full flex flex-col 
+        items-stretch rounded-2xl p-5 bg-card desktop:max-w-[33%]">
           <div class="flex flex-row">
             <div class="w-1/4">
               <img src="${extension.logo}" alt="${extension.name} Icon" />
@@ -41,14 +44,18 @@ const extensionsAll = data.map((extension) => {
             </label>
           </div>
         </article>`;
-  }).join('');
+}).join('');
 
 extensionList.innerHTML = extensionsAll;
 
 const removeExtensionButton = document.querySelectorAll('.removeExtensionButton') as NodeListOf<HTMLButtonElement>;
 
 removeExtensionButton.forEach((button) => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (event: Event) => {
+    console.log(event.currentTarget as HTMLElement);
+    const article = document.getElementsByTagName('article').item(0) as HTMLElement;
+    console.log(article);
+
     console.log('click me');
 
   })
