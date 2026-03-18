@@ -55,10 +55,11 @@ removeExtensionButton.forEach((button) => {
   button.addEventListener('click', (event: Event) => {
 
     const article = document.getElementsByTagName('article').item(0) as HTMLElement;
+    const id = button.getAttribute('data-id');
+    
     if (article) {
       article.remove();
     }
-    const id = button.getAttribute('data-id');
     if (id) {
       const extensionRemoved = extensions.filter((item) => item.id !== Number(id));
       console.log("extension removed: ", extensionRemoved);
