@@ -4,6 +4,7 @@ import data from './data.json'
 const toggleThemeButton = document.getElementById('toggleThemeButton') as HTMLButtonElement;
 const iconTheme = document.getElementById('iconTheme') as HTMLImageElement;
 const extensionList = document.getElementById('extension-list') as HTMLDivElement;
+let extensions = data;
 
 toggleThemeButton.addEventListener('click', () => {
   document.documentElement.classList.toggle('dark');
@@ -14,7 +15,7 @@ toggleThemeButton.addEventListener('click', () => {
 
 const extensionsAll = data.map((extension) => {
   return `
-        <article id="extension-${extension.id}" class="min-h-50 max-w-100 w-full flex flex-col 
+        <article data-id="${extension.id}" class="min-h-50 max-w-100 w-full flex flex-col 
         items-stretch rounded-2xl p-5 bg-card desktop:max-w-[33%]">
           <div class="flex flex-row">
             <div class="w-1/4">
@@ -26,7 +27,7 @@ const extensionsAll = data.map((extension) => {
             </div>
           </div>
           <div class="flex items-center justify-between">
-            <button class="rounded-full border-2 border-Neutral-300 px-4 py-1 font-notosans font-medium
+            <button data-id="${extension.id}" class="rounded-full border-2 border-Neutral-300 px-4 py-1 font-notosans font-medium
                   bg-buttonRemove text-text removeExtensionButton">
               Remove
             </button>
@@ -52,8 +53,17 @@ const removeExtensionButton = document.querySelectorAll('.removeExtensionButton'
 
 removeExtensionButton.forEach((button) => {
   button.addEventListener('click', (event: Event) => {
-    console.log(event.currentTarget as HTMLElement);
+
     const article = document.getElementsByTagName('article').item(0) as HTMLElement;
+    if (article) {
+      article.remove();
+    }
+    const id = button.getAttribute('data-id');
+    if (id) {
+      const extensionRemoved = extensions.filter((item) => item.id !== Number(id));
+      console.log("extension removed: ", extensionRemoved);
+    }
+
     console.log(article);
 
     console.log('click me');
