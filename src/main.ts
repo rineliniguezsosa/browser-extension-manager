@@ -52,9 +52,11 @@ extensionList.innerHTML = extensionsAll;
 const removeExtensionButton = document.querySelectorAll('.removeExtensionButton') as NodeListOf<HTMLButtonElement>;
 
 removeExtensionButton.forEach((button) => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (event) => {
+    const target = event.currentTarget as HTMLButtonElement;
+
     const id = button.getAttribute('data-id');
-    const article = document.getElementsByTagName('article').item(Number(id)) as HTMLElement;
+    const article = target.closest('article') as HTMLElement;
 
     if (article) {
       article.remove();
