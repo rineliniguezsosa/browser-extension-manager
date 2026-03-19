@@ -4,6 +4,7 @@ import data from './data.json'
 const toggleThemeButton = document.getElementById('toggleThemeButton') as HTMLButtonElement;
 const iconTheme = document.getElementById('iconTheme') as HTMLImageElement;
 const extensionList = document.getElementById('extension-list') as HTMLDivElement;
+const buttonState = document.querySelectorAll('.buttonState') as NodeListOf<HTMLButtonElement>;
 let extensions = data;
 
 toggleThemeButton.addEventListener('click', () => {
@@ -69,3 +70,11 @@ removeExtensionButton.forEach((button) => {
 
   })
 })
+
+buttonState.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const target = event.currentTarget as HTMLButtonElement; 
+    buttonState.forEach((btn) => btn.classList.remove('active'));
+    target.classList.add('active');
+  })
+});
