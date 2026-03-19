@@ -53,8 +53,8 @@ const removeExtensionButton = document.querySelectorAll('.removeExtensionButton'
 
 removeExtensionButton.forEach((button) => {
   button.addEventListener('click', () => {
-    const article = document.getElementsByTagName('article').item(0) as HTMLElement;
     const id = button.getAttribute('data-id');
+    const article = document.getElementsByTagName('article').item(Number(id)) as HTMLElement;
 
     if (article) {
       article.remove();
