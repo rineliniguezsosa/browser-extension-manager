@@ -52,22 +52,18 @@ extensionList.innerHTML = extensionsAll;
 const removeExtensionButton = document.querySelectorAll('.removeExtensionButton') as NodeListOf<HTMLButtonElement>;
 
 removeExtensionButton.forEach((button) => {
-  button.addEventListener('click', (event: Event) => {
-
+  button.addEventListener('click', () => {
     const article = document.getElementsByTagName('article').item(0) as HTMLElement;
     const id = button.getAttribute('data-id');
-    
+
     if (article) {
       article.remove();
     }
+
     if (id) {
       const extensionRemoved = extensions.filter((item) => item.id !== Number(id));
-      console.log("extension removed: ", extensionRemoved);
+      extensions = extensionRemoved;
     }
-
-    console.log(article);
-
-    console.log('click me');
 
   })
 })
