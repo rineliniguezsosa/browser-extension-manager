@@ -58,27 +58,72 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned the content switcher pattern, how to configure Tailwind CSS v4 typography, breakpoints, colors and gradients, and dark mode
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+@import "tailwindcss";
+
+@utility bg-gradient-light {
+  background: var(--gradient-light);
+}
+
+@utility bg-gradient-dark {
+  background: var(--gradient-dark);
+}
+
+@theme {
+  --color-Neutral-900: hsl(227, 75%, 14%);
+  --color-Neutral-800: hsl(226, 25%, 17%);
+  --color-Neutral-700: hsl(225, 23%, 24%);
+  --color-Neutral-600: hsl(226, 11%, 37%);
+  --color-Neutral-300: hsl(0, 0%, 78%);
+  --color-Neutral-200: hsl(217, 61%, 90%);
+  --color-Neutral-100: hsl(0, 0%, 93%);
+  --color-Neutral-0: hsl(200, 60%, 99%);
+
+  --color-Red-400: hsl(3, 86%, 64%);
+  --color-Red-500: hsl(3, 71%, 56%);
+  --color-Red-700: hsl(3, 77%, 44%);
+
+  --gradient-bg: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --color-banner: hsl(200, 60%, 99%);
+  --color-text: hsl(226, 11%, 37%);
+  --color-title: hsl(225, 23%, 24%);
+  --color-card: hsl(200, 60%, 99%);
+  --color-buttonicon: hsl(0, 0%, 93%);
+  --color-buttonRemove: hsl(200, 60%, 99%);
+  --color-button-state: hsl(200, 60%, 99%);
+
+  --breakpoint-desktop: 1440px;
+  
+  --font-notosans: "Noto Sans", sans-serif;
+}
+
+.dark {
+  --gradient-bg: linear-gradient(180deg, #040918 0%, #091540 100%);
+  --color-banner: hsl(226, 25%, 17%);
+  --color-title: hsl(200, 60%, 99%);
+  --color-text: hsl(200, 60%, 99%);
+  --color-card: hsl(225, 23%, 24%);
+  --color-buttonicon: hsl(225, 23%, 24%);
+  --color-buttonRemove: hsl(226, 25%, 17%);
+  --color-button-state: hsl(225, 23%, 24%);
+}
+
+.active {
+  background-color:hsl(3, 86%, 64%) ;
+  color:hsl(200, 60%, 99%);
+}
+.active:focus{
+  outline:2px hsl(3, 86%, 64%) solid;
+}
+
+@utility bg-app-gradient {
+  background: var(--gradient-bg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
