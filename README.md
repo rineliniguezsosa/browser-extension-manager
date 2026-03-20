@@ -127,7 +127,7 @@ I learned the content switcher pattern, how to configure Tailwind CSS v4 typogra
 
 ### Useful resources
 
-- [Example resource 1](https://www.w3schools.com/howto/howto_css_switch.asp) - This resource helped me review how to create the HTML switch element
+- [Switch component](https://www.w3schools.com/howto/howto_css_switch.asp) - This resource helped me review how to create the HTML switch element
 
 ### AI Collaboration
 
