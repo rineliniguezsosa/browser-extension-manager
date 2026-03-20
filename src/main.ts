@@ -142,8 +142,7 @@ removeExtensionButton.forEach((button) => {
       }
       
       if (id) {
-        const extensionRemoved = extensions.filter((item) => item.id !== Number(id));     
-        extensions = extensionRemoved;
+        extensions = extensions.filter((item) => item.id !== Number(id));     
       }
   })
 });
