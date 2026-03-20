@@ -84,9 +84,46 @@ const extensionsInactive = extensionInactive.map((extension) => {
         </article>`;
 }).join('');
 
+let extensionActive = extensions.filter((item) => item.isActive === true);
+
+const extensionsActive = extensionActive.map((extension) => {
+  return `
+        <article class="min-h-50 max-w-100 w-full flex flex-col 
+        items-stretch rounded-2xl p-5 bg-card desktop:max-w-[33%]">
+          <div class="flex flex-row">
+            <div class="w-1/4">
+              <img src="${extension.logo}" alt="${extension.name} Icon" />
+            </div>
+            <div class="w-3/4 px-1 pb-5">
+              <h2 class="text-xl font-bold font-notosans text-title">${extension.name}</h2>
+              <p class="text-base font-normal font-notosans text-text">${extension.description}</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button data-id="${extension.id}" class="rounded-full border-2 border-Neutral-300 px-4 py-1 font-notosans font-medium
+                  bg-buttonRemove text-text removeExtensionButton">
+              Remove
+            </button>
+
+            <label class="relative inline-block w-9.5 h-5 cursor-pointer">
+
+              <input type="checkbox" class="peer sr-only" ${extension.isActive ? 'checked' : ''} />
+              <div class="absolute inset-0 ${extension.isActive ? 'bg-Red-400' : 'bg-gray-300'} rounded-[34px] transition duration-400
+                  peer-checked:peer-focus:shadow-[0_0_1px_#2196F3]">
+              </div>
+              <div class="absolute left-1 bottom-1 w-3.5 h-3.5 bg-white rounded-full
+                  transition duration-400
+                  peer-checked:translate-x-4.5">
+              </div>
+            </label>
+          </div>
+        </article>`;
+}).join('');
+
 let views: { [key: string]: string } = {
   all: extensionsAll,
-  inactive: extensionsInactive
+  inactive: extensionsInactive,
+  active: extensionsActive
 }
 
 extensionList.innerHTML = views.all;
