@@ -132,23 +132,16 @@ I learned the content switcher pattern, how to configure Tailwind CSS v4 typogra
 
 - [Example resource 1](https://www.w3schools.com/howto/howto_css_switch.asp) - This resource helped me review how to create the HTML switch element
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
+- I used Copilot for the first time and I regret not having used it sooner, as it increased my speed by auto-completing what I type.
 - How to configure Tailwind v4 in a Vite project using JavaScript and TypeScript
 - Correct way to use a gradient in Tailwind v4
 - UI pattern Content Switcher
 - Adapt the code of the switch element to tailwindcss
 - How to use darkmode in Tailwind CSS v4
 - How to configure breakpoints in Tailwind CSS v4
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+- How to upload a Vite project to GitHub Pages
 
 ## Author
 
