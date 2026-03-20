@@ -47,6 +47,11 @@
   --color-button-state: hsl(225, 23%, 24%);
 }
 
+.active {
+  background-color:hsl(3, 86%, 64%) ;
+  color:hsl(200, 60%, 99%);
+}
+
 @utility bg-app-gradient {
   background: var(--gradient-bg);
   background-repeat: no-repeat;
