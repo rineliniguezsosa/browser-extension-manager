@@ -51,6 +51,9 @@
   background-color:hsl(3, 86%, 64%) ;
   color:hsl(200, 60%, 99%);
 }
+.active:focus{
+  outline:2px hsl(3, 86%, 64%) solid;
+}
 
 @utility bg-app-gradient {
   background: var(--gradient-bg);
