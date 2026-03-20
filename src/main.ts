@@ -94,15 +94,7 @@ extensionList.innerHTML = views.all;
 buttonState.forEach((button) => {
   button.addEventListener('click', (event) => {
     const target = event.currentTarget as HTMLButtonElement;
-    const view = button.dataset.view as string;
-
-    console.log(view);
-    console.log(button.getAttribute('data-view'));
-    console.log(target.getAttribute('data-view'));
-    console.log(target.dataset.view);
-    
-    
-    
+    const view = button.dataset.view as string;   
     extensionList.innerHTML = views[view];
     buttonState.forEach((btn) => btn.classList.remove('active'));
     target.classList.add('active');
