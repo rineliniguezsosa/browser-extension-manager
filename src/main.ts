@@ -128,33 +128,52 @@ let views: { [key: string]: string } = {
 
 extensionList.innerHTML = views.all;
 
+const removeExtensionButton = document.querySelectorAll('.removeExtensionButton') as NodeListOf<HTMLButtonElement>;
+
+removeExtensionButton.forEach((button) => {
+  button.addEventListener('click', (event) => {
+      const target = event.currentTarget as HTMLElement;
+    
+      const id = target.getAttribute('data-id');
+      const article = button.closest('article') as HTMLElement;
+      
+      if (article) {
+        article.remove();
+      }
+      
+      if (id) {
+        const extensionRemoved = extensions.filter((item) => item.id !== Number(id));
+        extensions = extensionRemoved;
+      }
+  })
+});
+
+extensionList.addEventListener('click', (event) => {
+  const target = event.target as HTMLElement;
+
+  if (target.classList.contains('removeExtensionButton')) {
+
+    const id = target.getAttribute('data-id');
+    const article = target.closest('article');
+
+    if (article) {
+        article.remove();
+    }
+
+    if (id) {
+      extensions = extensions.filter((item) => item.id !== Number(id));
+    }
+  }
+});
+
 buttonState.forEach((button) => {
   button.addEventListener('click', (event) => {
     const target = event.currentTarget as HTMLButtonElement;
-    const view = button.dataset.view as string;   
+    const view = target.dataset.view as string;   
     extensionList.innerHTML = views[view];
     buttonState.forEach((btn) => btn.classList.remove('active'));
     target.classList.add('active');
   })
 });
 
-const removeExtensionButton = document.querySelectorAll('.removeExtensionButton') as NodeListOf<HTMLButtonElement>;
 
-removeExtensionButton.forEach((button) => {
-  button.addEventListener('click', (event) => {
-    const target = event.currentTarget as HTMLButtonElement;
-
-    const id = button.getAttribute('data-id');
-    const article = target.closest('article') as HTMLElement;
-
-    if (article) {
-      article.remove();
-    }
-
-    if (id) {
-      const extensionRemoved = extensions.filter((item) => item.id !== Number(id));
-      extensions = extensionRemoved;
-    }
-
-  })
-})
