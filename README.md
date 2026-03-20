@@ -17,7 +17,6 @@ This is a solution to the [Browser extensions manager UI challenge on Frontend M
   - [Useful resources](#useful-resources)
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -148,11 +147,3 @@ I learned the content switcher pattern, how to configure Tailwind CSS v4 typogra
 - Website - [Rinel iñiguez sosa portfolio](https://rineliniguezsosa.github.io/Portafolio/)
 - Frontend Mentor - [@rineliniguezsosa](https://www.frontendmentor.io/profile/rineliniguezsosa)
 - Linkedin - [Rinel iñiguez](https://www.linkedin.com/in/rinel-iniguez/)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
