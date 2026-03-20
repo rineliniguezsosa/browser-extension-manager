@@ -142,7 +142,7 @@ removeExtensionButton.forEach((button) => {
       }
       
       if (id) {
-        const extensionRemoved = extensions.filter((item) => item.id !== Number(id));
+        const extensionRemoved = extensions.filter((item) => item.id !== Number(id));     
         extensions = extensionRemoved;
       }
   })
@@ -170,6 +170,7 @@ buttonState.forEach((button) => {
   button.addEventListener('click', (event) => {
     const target = event.currentTarget as HTMLButtonElement;
     const view = target.dataset.view as string;   
+    target.classList.toggle('active')
     extensionList.innerHTML = views[view];
     buttonState.forEach((btn) => btn.classList.remove('active'));
     target.classList.add('active');
