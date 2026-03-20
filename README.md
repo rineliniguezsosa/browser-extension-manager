@@ -2,8 +2,7 @@
 
 ![Design preview for the Browser extensions manager UI coding challenge](./preview.jpg)
 
-This is a solution to the [Browser extensions manager UI challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
+This is a solution to the [Browser extensions manager UI challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -85,7 +84,7 @@ I learned the content switcher pattern, how to configure Tailwind CSS v4 typogra
   --color-Red-500: hsl(3, 71%, 56%);
   --color-Red-700: hsl(3, 77%, 44%);
 
-  --gradient-bg: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --gradient-bg: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
   --color-banner: hsl(200, 60%, 99%);
   --color-text: hsl(226, 11%, 37%);
   --color-title: hsl(225, 23%, 24%);
@@ -95,7 +94,7 @@ I learned the content switcher pattern, how to configure Tailwind CSS v4 typogra
   --color-button-state: hsl(200, 60%, 99%);
 
   --breakpoint-desktop: 1440px;
-  
+
   --font-notosans: "Noto Sans", sans-serif;
 }
 
@@ -111,11 +110,11 @@ I learned the content switcher pattern, how to configure Tailwind CSS v4 typogra
 }
 
 .active {
-  background-color:hsl(3, 86%, 64%) ;
-  color:hsl(200, 60%, 99%);
+  background-color: hsl(3, 86%, 64%);
+  color: hsl(200, 60%, 99%);
 }
-.active:focus{
-  outline:2px hsl(3, 86%, 64%) solid;
+.active:focus {
+  outline: 2px hsl(3, 86%, 64%) solid;
 }
 
 @utility bg-app-gradient {
@@ -127,9 +126,7 @@ I learned the content switcher pattern, how to configure Tailwind CSS v4 typogra
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- full stack technologies
 
 ### Useful resources
 
