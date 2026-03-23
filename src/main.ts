@@ -1,5 +1,5 @@
 import './style.css'
-import data from './data.json'
+import { data } from './data';
 import iconSun from './assets/images/icon-sun.svg'
 import iconMoon from './assets/images/icon-moon.svg'
 
