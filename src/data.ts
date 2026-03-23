@@ -11,7 +11,15 @@ import linkCheckerLogo from './assets/images/logo-link-checker.svg';
 import domSnapshotLogo from './assets/images/logo-dom-snapshot.svg';
 import consolePlusLogo from './assets/images/logo-console-plus.svg';
 
-export const data = [
+interface extensionProps {
+    id:number,
+    logo:string,
+    name:string,
+    description:string,
+    isActive:boolean
+}
+
+export const data: extensionProps[] = [
     {
         id:0,
         logo: devLensLogo,
