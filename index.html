@@ -24,19 +24,21 @@
 </head>
 
 <body class="px-3 py-6 bg-app-gradient min-h-screen">
-  <main class="">
-
-    <div class="rounded-lg p-3 bg-banner  flex justify-between items-stretch">
-      <div class="max-w-full">
-        <img class="max-w-full h-auto" src="./src/assets/images/logo.svg" alt="Logo">
-      </div>
-
-      <button id="toggleThemeButton" class="w-1/6 max-w-15 rounded-lg bg-buttonicon flex justify-center 
-      items-center hover:bg-Neutral-300 focus:border-2 focus:border-Red-400"
-      >
+  
+  <header>
+      <div class="rounded-lg p-3 bg-banner  flex justify-between items-stretch">
+        <div class="max-w-full">
+          <img class="max-w-full h-auto" src="./src/assets/images/logo.svg" alt="Logo">
+        </div>
+        <button id="toggleThemeButton" class="w-1/6 max-w-15 rounded-lg bg-buttonicon flex justify-center
+        items-center hover:bg-Neutral-300 focus:border-2 focus:border-Red-400"
+        >
         <img id="iconTheme" class="w-5 h-5" src="./src/assets/images/icon-moon.svg" alt="Moon Icon">
       </button>
     </div>
+  </header>
+
+  <main>
 
     <div class="w-full flex flex-col mt-4 desktop:flex-row desktop:mt-20" id="extension-list-content">
       <div class="w-full p-5 desktop:p-0">
@@ -65,12 +67,14 @@
       desktop:flex-wrap desktop:justify-start desktop:gap-x-1 desktop:gap-y-3" id="extension-list">
 
     </div>
+  </main>
 
+  <footer>
     <div class="attribution mt-5 text-text">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Rinel iñiguez sosa</a>.
     </div>
-  </main>
+  </footer>
   <script type="module" src="/src/main.ts"></script>
 </body>
 
