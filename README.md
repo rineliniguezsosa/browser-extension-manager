@@ -17,6 +17,9 @@ This is a solution to the [Browser extensions manager UI challenge on Frontend M
   - [Useful resources](#useful-resources)
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
+- [Requirements](#requirements)
+- [Install](#install)
+- [Deployment](#deployment)
 
 ## Overview
 
@@ -145,3 +148,51 @@ I learned the content switcher pattern, how to configure Tailwind CSS v4 typogra
 - Website - [Rinel iñiguez sosa portfolio](https://rineliniguezsosa.github.io/Portafolio/)
 - Frontend Mentor - [@rineliniguezsosa](https://www.frontendmentor.io/profile/rineliniguezsosa)
 - Linkedin - [Rinel iñiguez](https://www.linkedin.com/in/rinel-iniguez/)
+
+## Requirements 
+
+- [Visual Studio Code](https://code.visualstudio.com/) (or any other code editor of your choice)
+
+## Install
+
+Follow these steps to download and run the project locally
+
+1. **Clone this repository:**
+
+  Open your terminal and run the following command:
+
+   ```bash
+   git clone https://github.com/rineliniguezsosa/browser-extension-manager.git
+   ```
+
+2.- **Navigate to the project directory:**
+
+```bash
+cd browser-extension-manager
+```
+
+3.-**Open the project in Visual Studio Code:**
+
+```bash
+code .
+```
+
+## Deployment
+
+To deploy the project locally using vite, follow these steps:
+
+1. **Install the dependencies:**
+
+```bash
+npm install
+```
+
+2. **Start the development server:**
+
+```bash
+npm run dev
+```
+
+3. **View the project:**
+
+- Vite Server will open a new tab in your browser with the URL http://localhost:5173/ (URL may vary). Here you can see your project in operation.
