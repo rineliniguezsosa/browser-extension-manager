@@ -1,5 +1,7 @@
 import './style.css'
 import data from './data.json'
+import iconSun from './assets/images/icon-sun.svg'
+import iconMoon from './assets/images/icon-moon.svg'
 
 const toggleThemeButton = document.getElementById('toggleThemeButton') as HTMLButtonElement;
 const iconTheme = document.getElementById('iconTheme') as HTMLImageElement;
@@ -9,9 +11,9 @@ let extensions = data;
 
 toggleThemeButton.addEventListener('click', () => {
   document.documentElement.classList.toggle('dark');
-  iconTheme.src = document.documentElement.classList.contains('dark') ?
-    './src/assets/images/icon-sun.svg'
-    : './src/assets/images/icon-moon.svg';
+  iconTheme.src = document.documentElement.classList.contains('dark') 
+  ? iconSun
+  : iconMoon;
 });
 
 const extensionsAll = data.map((extension) => {
